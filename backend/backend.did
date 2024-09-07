@@ -1,0 +1,12 @@
+type Stock = 
+ record {
+   price: float64;
+   symbol: text;
+ };
+service : {
+  buyStock: (text, nat) -> (text);
+  getMarketData: () -> (vec float64) query;
+  getStockList: () -> (vec Stock) query;
+  sellStock: (text, nat) -> (text);
+  updatePrices: () -> ();
+}
